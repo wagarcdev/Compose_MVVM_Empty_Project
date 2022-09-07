@@ -46,5 +46,4 @@ object AppModule {
             .build()
             .create(ApplicationAPI::class.java)
     }
-
 }

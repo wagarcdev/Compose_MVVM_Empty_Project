@@ -15,11 +15,12 @@ class AppRepositoryImplementation(
         return dao.addMyObject(myObject)
     }
 
-    override suspend fun updateMyObject(myObject: MyObject) = dao.updateMyObject(myObject)
-
     override suspend fun getMyObjectById(myObjectId: Long): MyObject {
         return dao.getMyObjectById(myObjectId)
     }
+
+    override suspend fun updateMyObject(myObject: MyObject) = dao.updateMyObject(myObject)
+
 
     override suspend fun getAllMyObjects(): List<MyObject> = dao.getAllMyObjects()
 
