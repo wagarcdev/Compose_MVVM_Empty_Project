@@ -1,9 +1,8 @@
 # Template for Empty Jetpack Compose Android App
 
+*** ATENTION ***
 
-              *** ATENTION ***
-        
-     ***  README UNDER CONSTRUCTION  ***
+***  README UNDER CONSTRUCTION  ***
 
 ***  THIS TEMPLATE IS A WORK IN PROGRESS ***
 
