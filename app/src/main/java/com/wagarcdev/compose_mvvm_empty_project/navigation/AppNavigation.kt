@@ -7,13 +7,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.wagarcdev.compose_mvvm_empty_project.MainViewModel
-import com.wagarcdev.compose_mvvm_empty_project.presentation.screens.DetailScreen
-import com.wagarcdev.compose_mvvm_empty_project.presentation.screens.MainScreen
+import com.wagarcdev.compose_mvvm_empty_project.presentation.screens.screen_detail.DetailScreen
+import com.wagarcdev.compose_mvvm_empty_project.presentation.screens.screen_main.MainScreen
 
 @Composable
 fun AppNavigation() {
-
-    val context = LocalContext.current
 
     val mainViewModel: MainViewModel = hiltViewModel()
 

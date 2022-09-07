@@ -1,8 +1,8 @@
-package com.wagarcdev.compose_mvvm_empty_project.presentation.screens
+package com.wagarcdev.compose_mvvm_empty_project.presentation.screens.screen_detail
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.Button
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -10,21 +10,8 @@ import androidx.compose.ui.unit.dp
 import com.wagarcdev.compose_mvvm_empty_project.MainViewModel
 import com.wagarcdev.compose_mvvm_empty_project.navigation.Screens
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MainScreen(
-    mainViewModel: MainViewModel
-) {
-
-    Scaffold(
-        topBar = {  },
-        content = { MainScreenContent(mainViewModel) }
-    )
-
-}
-
-@Composable
-fun MainScreenContent(
+fun DetailScreenContent(
     mainViewModel: MainViewModel
 ) {
     Column(
@@ -34,15 +21,20 @@ fun MainScreenContent(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Text(text = "Empty Compose MVVM Project")
+        Text(
+            text = "" +
+                    "WRITE ABOUT" +
+                    ""
+        )
 
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(
-            onClick = { mainViewModel.navHostController.navigate(route = Screens.DetailScreen.name) }
+            onClick = { mainViewModel.navHostController.navigate(route = Screens.MainScreen.name) }
         ) {
-
+            Text(
+                text = "Back to Main Screen"
+            )
         }
     }
 }
-
