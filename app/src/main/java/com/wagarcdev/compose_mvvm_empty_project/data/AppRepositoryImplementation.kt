@@ -8,9 +8,6 @@ class AppRepositoryImplementation(
     private val dao: AppDatabaseDAO
 ): AppRepository {
 
-    /** TODO implement abstract suspend functions from AppRepository here  */
-
-
     override suspend fun addMyObject(myObject: MyObject): Long {
         return dao.addMyObject(myObject)
     }
