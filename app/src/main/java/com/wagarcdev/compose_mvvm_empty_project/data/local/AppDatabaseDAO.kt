@@ -5,11 +5,8 @@ import androidx.room.OnConflictStrategy.REPLACE
 import com.wagarcdev.compose_mvvm_empty_project.domain.model.MyObject
 import kotlinx.coroutines.flow.Flow
 
-
 @Dao
 interface AppDatabaseDAO {
-
-    /** Insert ROOM Queries here */
 
     @Insert(onConflict = REPLACE)
     fun addMyObject(myObject: MyObject): Long

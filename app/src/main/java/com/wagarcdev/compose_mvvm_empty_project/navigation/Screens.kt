@@ -14,6 +14,4 @@ enum class Screens {
             else -> throw IllegalArgumentException("Route $route was not recognized")
         }
     }
-
-
 }
