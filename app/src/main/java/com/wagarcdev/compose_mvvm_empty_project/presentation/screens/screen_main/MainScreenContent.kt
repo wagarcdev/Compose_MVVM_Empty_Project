@@ -26,7 +26,11 @@ fun MainScreenContent(
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(
-            onClick = { mainViewModel.navHostController.navigate(route = Screens.DetailScreen.name) }
+            onClick = {
+                mainViewModel.navHostController.navigate(
+                    route = Screens.DetailScreen.name
+                )
+            }
         ) {
             Text(
                 text = "See Detail Screen"
