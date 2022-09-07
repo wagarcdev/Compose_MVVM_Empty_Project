@@ -30,7 +30,11 @@ fun DetailScreenContent(
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(
-            onClick = { mainViewModel.navHostController.navigate(route = Screens.MainScreen.name) }
+            onClick = {
+                mainViewModel.navHostController.navigate(
+                    route = Screens.MainScreen.name
+                )
+            }
         ) {
             Text(
                 text = "Back to Main Screen"
