@@ -3,7 +3,7 @@ package com.wagarcdev.compose_mvvm_empty_project.domain.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "my_object_tbl")
 data class MyObject(
 
     @PrimaryKey

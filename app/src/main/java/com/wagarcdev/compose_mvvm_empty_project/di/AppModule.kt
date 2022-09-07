@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.wagarcdev.compose_mvvm_empty_project.data.AppRepositoryImplementation
 import com.wagarcdev.compose_mvvm_empty_project.data.local.AppDatabase
+import com.wagarcdev.compose_mvvm_empty_project.data.local.AppDatabaseDAO
 import com.wagarcdev.compose_mvvm_empty_project.data.remote.ApplicationAPI
 import com.wagarcdev.compose_mvvm_empty_project.domain.repository.AppRepository
 import dagger.Module
@@ -35,24 +36,13 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideAppRepository(): AppRepository {
-        return  AppRepositoryImplementation()
-    }
+    fun provideAppDAO(appDatabase: AppDatabase): AppDatabaseDAO = appDatabase.dao
 
     @Singleton
     @Provides
     fun provideApi(): ApplicationAPI {
 
-        val cookieManager = CookieManager()
-
-        val httpClient = OkHttpClient.Builder()
-            .cookieJar(JavaNetCookieJar(cookieManager))
-            .build()
-
         return Retrofit.Builder()
-            .client(httpClient)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
             .create(ApplicationAPI::class.java)
     }

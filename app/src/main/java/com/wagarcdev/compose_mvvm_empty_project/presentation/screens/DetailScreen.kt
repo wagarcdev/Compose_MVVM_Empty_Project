@@ -1,10 +1,8 @@
 package com.wagarcdev.compose_mvvm_empty_project.presentation.screens
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.BottomSheetScaffold
-import androidx.compose.material.Button
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -13,19 +11,17 @@ import com.wagarcdev.compose_mvvm_empty_project.MainViewModel
 import com.wagarcdev.compose_mvvm_empty_project.navigation.Screens
 
 
-@OptIn(ExperimentalMaterialApi::class)
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun DetailScreen(
     mainViewModel: MainViewModel
 ) {
 
-    BottomSheetScaffold(
-        sheetPeekHeight = 0.dp,
+    Scaffold(
         topBar = {  },
         content = {
             DetailScreenContent(mainViewModel)
-        },
-        sheetContent = {  }
+        }
     )
 
 }
