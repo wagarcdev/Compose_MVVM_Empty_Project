@@ -2,7 +2,7 @@
 
 Template para um aplicativo Android vazio utilizando o Jetpack Compose e a arquitetura MVVM.
 
-*** ESTE TEMPLATE ESTÁ EM ANDAMENTO ***
+*** ESTE TEMPLATE ESTÁ EM CONTRUÇÂO ***
 
 Se você está interessado em utilizá-lo, por favor, marque a opção "Watch" para acompanhar as atualizações.
 
