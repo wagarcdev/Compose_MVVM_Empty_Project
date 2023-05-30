@@ -16,9 +16,10 @@ O Compose_MVVM_Empty_Project é um template que oferece uma estrutura inicial pa
 
 O projeto segue uma estrutura organizada, separando as camadas do MVVM, juntamente com os diretórios e pacotes comuns encontrados em um projeto Android típico. Aqui estão algumas das principais pastas e arquivos do projeto:
 
-- `app` - Contém o código-fonte específico do aplicativo.
+- `app` - Contém o código-fonte específico do aplicativo, como views, view models e controladores.
 - `data` - Contém as classes relacionadas aos dados, como repositórios, modelos de dados e fontes de dados.
-- `presentation` - Contém as classes relacionadas à apresentação da interface do usuário, como views, view models e controladores.
+- `domain` - Contém as classes que representam as entidades e as regras de negócio do aplicativo.
+- `presentation` - Contém as classes relacionadas à apresentação da interface do usuário.
 - `util` - Contém classes utilitárias e helpers para auxiliar no desenvolvimento.
 
 ## 📄 Pré-requisitos
